@@ -43,35 +43,37 @@
     session_destroy();
   }
 
-  // function sanitizeString($var)
-  // {
-  //   global $pdo;
+  function sanitizeString($var)
+  {
+    global $pdo;
 
-  //   $var = strip_tags($var);
-  //   $var = htmlentities($var);
+    $var = strip_tags($var);
+    $var = htmlentities($var);
 
-  //   if (get_magic_quotes_gpc())
-  //     $var = stripslashes($var);
+    if (get_magic_quotes_gpc())
+      $var = stripslashes($var);
 
-  //   $result = $pdo->quote($var);          // This adds single quotes
-  //   return str_replace("'", "", $result); // So now remove them
-  // }
+    $result = $pdo->quote($var);          // This adds single quotes
+    return str_replace("'", "", $result); // So now remove them
+  }
 
   function showProfile($user)
   {
     global $pdo;
 
-    if (file_exists("$user.jpg"))
-      echo "<img src='$user.jpg' style='float:left;'>";
-
+    if (file_exists("$user.jpg")){
+      echo "<img src='$user.jpg' style='float:center;' class='profilepic'>";
+    }else{
+      echo "<h2>User Profile Pic Not Available</h2>";
+    }
+    echo "<h2>Username: $user</h2><br>";
     $result = $pdo->query("SELECT * FROM profiles WHERE user='$user'");
 
     while ($row = $result->fetch())
     {
-      die(stripslashes($row['text']) . "<br style='clear:left;'><br>");
+      die(stripslashes($row['text']). "<br style='float:center;' ><br>");
     }
     
-    echo "<p>Nothing to see here, yet</p><br>";
   }
 
 ?>

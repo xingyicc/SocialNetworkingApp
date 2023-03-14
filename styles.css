@@ -97,3 +97,53 @@
 	font-size: 22px;
 }
 
+yourprofile {
+  display: block;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+h2 {
+  display: block;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+
+.profilepic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.profilepic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
