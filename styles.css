@@ -1,0 +1,99 @@
+* {
+  font-family:verdana,sans-serif;
+  font-size  :14pt;
+}
+  
+/* body {
+  margin    :0;
+  background: url(background.jpg) no-repeat center center; 
+  background-size: cover;
+}
+
+.ui-overlay-a {
+  background: url(background.jpg) no-repeat center center; 
+  background-size: cover;
+  border-color: #bbb;
+  color: #333;
+  text-shadow: 0 1px 0 #f3f3f3;
+} */
+
+#header {
+  background-color: #c0d5ff;
+  width: 100%;
+}
+
+#navigation {
+  width: 50%;
+  background-color: #c0d5ff;
+}
+
+#navigation a {
+  background-color: #c0d5ff;
+  font-size: 18px;
+}
+
+#navigation a:hover {
+  background-color: rgb(255, 254, 254);
+  color: black;
+}
+
+#navigation #user {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #c0d5ff;
+  padding: 0;
+}
+
+#user-dropbtn {
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  border: none;
+}
+
+#user-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+#user-dropdown-content a {
+  color: black;
+  padding: 12px;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+#user:hover {
+  background-color: rgb(255, 254, 254);
+}
+
+#user:hover #user-dropbtn {
+  background-color: rgb(255, 254, 254);
+}
+
+#user:hover #user-dropdown-content {
+  display: block;
+}
+
+#user-dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+#content {
+	padding-top: 80px;
+	padding-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#content #welcome {
+	font-size: 22px;
+}
+
