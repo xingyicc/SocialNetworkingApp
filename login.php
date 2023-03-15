@@ -20,19 +20,16 @@
       } else {
         $_SESSION['user'] = $user;
         $_SESSION['pass'] = $pass;
-        die("<div class='center'>You are now logged in.
-        </div>
-        </div>
-        </body></html>");
+        header('Location: index.php');
+        exit;
       }
     }
   }
 
 echo <<<_END
-    <div>
+    <div id="content">
       <form method='post' action='login.php'>
-        <div data-role='fieldcontain'>
-          <label>Error: </label>
+        <div data-role='fieldcontain' id="error">
           <span class='error'>$error</span>
         </div>
         <div data-role='fieldcontain'>
