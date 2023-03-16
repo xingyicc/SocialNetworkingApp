@@ -2,20 +2,12 @@
   font-family:verdana,sans-serif;
   font-size  :14pt;
 }
-  
-/* body {
-  margin    :0;
-  background: url(background.jpg) no-repeat center center; 
-  background-size: cover;
-}
 
-.ui-overlay-a {
-  background: url(background.jpg) no-repeat center center; 
+.ui-page {
+  background-image: url('background.jpg');
   background-size: cover;
-  border-color: #bbb;
-  color: #333;
-  text-shadow: 0 1px 0 #f3f3f3;
-} */
+  background-repeat: no-repeat;
+}
 
 #header {
   background-color: #c0d5ff;
@@ -86,6 +78,7 @@
 }
 
 #content {
+  width: 60%;
 	padding-top: 80px;
 	padding-bottom: 30px;
 	margin-left: auto;
@@ -95,6 +88,10 @@
 
 #content #welcome {
 	font-size: 22px;
+}
+
+#error {
+  color: red;
 }
 
 yourprofile {
