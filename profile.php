@@ -3,13 +3,12 @@
 
   if (!$loggedin) die("</div><a href= ./index.php >Error; Please Log in or Sign Up</body></html>");
 
-  echo "<yourprofile>Your Profile</yourprofile>";
-
   $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
     
   if (isset($_POST['text']))
   {
-    $text = sanitizeString($_POST['text']);
+    // $text = sanitizeString($_POST['text']);
+    $text = $_POST['text'];
     $text = preg_replace('/\s\s+/', ' ', $text);
 
     if ($result->rowCount())
@@ -79,6 +78,7 @@
   showProfile($user);
 
 echo <<<_END
+    <div id="content">
       <form data-ajax='false' method='post'
         action='profile.php?r=$randstr' enctype='multipart/form-data'>
       <h3>Enter or edit your details and/or upload an image</h3>
@@ -86,7 +86,7 @@ echo <<<_END
       Image: <input type='file' name='image' size='14'>
       <input type='submit' value='Save Profile'>
       </form>
-    </div><br>
+    </div>
   </body>
 </html>
 _END;

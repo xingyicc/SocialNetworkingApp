@@ -7,12 +7,12 @@
   }
   if (isset($_GET['view']))
   {
-    $view = sanitizeString($_GET['view']);
+    // $view = sanitizeString($_GET['view']);
+    $view = $_GET['view'];
 
     if ($view == $user) $name = "Your";
     else                $name = "$view's";
 
-    echo "<h3>$name Profile</h3>";
     showProfile($view);
     echo "<a data-role='button' data-transition='slide'
           href='messages.php?view=$view&r=$randstr'>View $name messages</a>";
@@ -21,7 +21,8 @@
 
   if (isset($_GET['add']))
   {
-    $add = sanitizeString($_GET['add']);
+    // $add = sanitizeString($_GET['add']);
+    $add = $_GET['add'];
 
     $result = queryMysql("SELECT * FROM friends
       WHERE user='$add' AND friend='$user'");
@@ -30,7 +31,8 @@
   }
   elseif (isset($_GET['remove']))
   {
-    $remove = sanitizeString($_GET['remove']);
+    // $remove = sanitizeString($_GET['remove']);
+    $remove = $_GET['remove'];
     queryMysql("DELETE FROM friends
       WHERE user='$remove' AND friend='$user'");
   }
@@ -38,6 +40,7 @@
   $result = queryMysql("SELECT user FROM members ORDER BY user");
   $num    = $result->rowCount();
 
+  echo "<div><ul>";
   while ($row = $result->fetch())
   {
     if ($row['user'] == $user) continue;
@@ -64,9 +67,8 @@
     else      echo " [<a data-transition='slide'
       href='members.php?remove=" . $row['user'] . "&r=$randstr'>drop</a>]";
   }
-
+  echo "</ul></div>";
 ?>
-    </ul></div>
   </body>
 </html>
 

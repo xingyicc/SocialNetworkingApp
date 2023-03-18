@@ -45,7 +45,7 @@
       <div class="ui-btn-right" id='user'>
         <button id="user-dropbtn" data-icon="gear">User: $user</button>
         <div id="user-dropdown-content">
-          <a href= ./profile.php? >Profile</a>
+          <a href= ./profile.php >Profile</a>
           <a href= ./logout.php >Log Out</a>
         </div>
       </div>

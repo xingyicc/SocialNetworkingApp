@@ -61,6 +61,9 @@
   {
     global $pdo;
 
+    echo "<div id='content'>";
+    echo "<yourprofile>$user Profile</yourprofile>";
+
     if (file_exists("$user.jpg")){
       echo "<img src='$user.jpg' style='float:center;' class='profilepic'>";
     }else{
@@ -73,6 +76,8 @@
     {
       die(stripslashes($row['text']). "<br style='float:center;' ><br>");
     }
+
+    echo "</div>";
     
   }
 
