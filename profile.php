@@ -75,7 +75,9 @@
     }
   }
 
+  echo "<div id='content'>";
   showProfile($user);
+  echo "</div>";
 
 echo <<<_END
     <div id="content">

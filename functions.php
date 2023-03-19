@@ -61,7 +61,6 @@
   {
     global $pdo;
 
-    echo "<div id='content'>";
     echo "<yourprofile>$user Profile</yourprofile>";
 
     if (file_exists("$user.jpg")){
@@ -69,15 +68,14 @@
     }else{
       echo "<h2>User Profile Pic Not Available</h2>";
     }
-    echo "<h2>Username: $user</h2><br>";
+    echo "<h2>Username: $user</h2>";
     $result = $pdo->query("SELECT * FROM profiles WHERE user='$user'");
 
     while ($row = $result->fetch())
     {
-      die(stripslashes($row['text']). "<br style='float:center;' ><br>");
+      echo stripslashes($row['text']);
+      // die(stripslashes($row['text']));
     }
-
-    echo "</div>";
     
   }
 

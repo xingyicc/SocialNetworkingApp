@@ -13,6 +13,7 @@
     if ($view == $user) $name = "Your";
     else                $name = "$view's";
 
+    echo "<div id='content'>";
     showProfile($view);
     echo "<a data-role='button' data-transition='slide'
           href='messages.php?view=$view&r=$randstr'>View $name messages</a>";
