@@ -1,7 +1,7 @@
 <?php //messages.php
   require_once 'header.php';
   
-  if (!$loggedin) die("</div></body></html>");
+  // if (!$loggedin) die("</div></body></html>");
 
   if (isset($_GET['view'])) $view = $_GET['view'];
   else                      $view = $user;
@@ -31,6 +31,7 @@
     showProfile($view);
     
     echo <<<_END
+    <div id="content">
       <form method='post' action='messages.php?view=$view&r=$randstr'>
         <fieldset data-role="controlgroup" data-type="horizontal">
           <legend>Type here to leave a message</legend>
